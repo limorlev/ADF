@@ -1,0 +1,14 @@
+{
+	"name": "Azure_ml_limor",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureMLService",
+		"typeProperties": {
+			"subscriptionId": "8006d35a-08b5-4d8c-a47e-330dba750f98",
+			"resourceGroupName": "rg-ml",
+			"mlWorkspaceName": "ml_limor",
+			"authentication": "MSI"
+		}
+	}
+}

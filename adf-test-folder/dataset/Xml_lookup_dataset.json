@@ -1,0 +1,19 @@
+{
+	"name": "Xml_lookup_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Xml",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "simple.xml",
+				"fileSystem": "xml"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

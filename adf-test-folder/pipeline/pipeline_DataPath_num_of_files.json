@@ -1,0 +1,38 @@
+{
+	"name": "pipeline_DataPath_num_of_files",
+	"properties": {
+		"activities": [
+			{
+				"name": "Machine Learning Execute Pipeline1",
+				"type": "AzureMLExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"experimentName": "DataPath_param_pipeline",
+					"mlParentRunId": "",
+					"mlPipelineId": "18a57d8d-c8d3-4f03-9cf8-8879053d9d77",
+					"dataPathAssignments": {
+						"input_datapath": {
+							"DataStoreName": "workspaceblobstore",
+							"RelativePath": "UI/07-01-2021_022951_UTC/"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureML_ml_limor_ws",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-08-07T13:57:11Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

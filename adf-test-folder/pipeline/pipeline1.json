@@ -1,0 +1,48 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Web1",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"url": "http://8fab68b1-49bb-482f-a7d9-597dc29d9db4.westeurope.azurecontainer.io/score",
+					"method": "POST",
+					"headers": {
+						"Content-Type": "application/json"
+					},
+					"body": {
+						"data": [
+							{
+								"day": "1",
+								"mnth": "2",
+								"year": "2021",
+								"season": "1",
+								"holiday": "0",
+								"weekday": "1",
+								"workingday": "1",
+								"weathersit": "1",
+								"temp": "0.65",
+								"atemp": "0.4",
+								"hum": "0.6",
+								"windspeed": "0.5"
+							}
+						]
+					}
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-05-20T10:59:30Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

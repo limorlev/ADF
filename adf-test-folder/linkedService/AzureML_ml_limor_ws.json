@@ -1,0 +1,16 @@
+{
+	"name": "AzureML_ml_limor_ws",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureMLService",
+		"typeProperties": {
+			"subscriptionId": "8006d35a-08b5-4d8c-a47e-330dba750f98",
+			"resourceGroupName": "rg-ml-predict",
+			"mlWorkspaceName": "ws-ml-predict",
+			"servicePrincipalId": "9824adbc-33b1-45d9-a03a-a2f1de403e56",
+			"tenant": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkFERk1MTElNT1JfNWM2ODZiMjktNzBmOS00MDg5LWExYzEtOTQ2Y2M5MDE4MDcxIg0KfQ=="
+		}
+	}
+}

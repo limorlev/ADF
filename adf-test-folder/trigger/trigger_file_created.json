@@ -1,0 +1,37 @@
+{
+	"name": "trigger_file_created",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline_ml_with_ds",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"filename": "@triggerBody().fileName"
+				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline3",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"FileName": "@triggerBody().fileName"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/azureml-blobstore-2119aa90-cb1c-4500-bb2d-5b64847ee59d/blobs/diabetes",
+			"blobPathEndsWith": ".csv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/8006d35a-08b5-4d8c-a47e-330dba750f98/resourceGroups/rg-ml-predict/providers/Microsoft.Storage/storageAccounts/wsmlpredict7289734920",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

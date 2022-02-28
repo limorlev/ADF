@@ -1,0 +1,19 @@
+{
+	"name": "Json_dest",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage2_linked_service",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "archive"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

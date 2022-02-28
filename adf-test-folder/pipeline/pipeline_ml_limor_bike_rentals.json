@@ -1,0 +1,30 @@
+{
+	"name": "pipeline_ml_limor_bike_rentals",
+	"properties": {
+		"activities": [
+			{
+				"name": "Machine Learning Execute Pipeline1",
+				"type": "AzureMLExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"mlPipelineId": "1c7bc732-9d82-4c73-b3ca-1904c56537fc"
+				},
+				"linkedServiceName": {
+					"referenceName": "Azure_ml_limor",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2022-02-03T10:02:26Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

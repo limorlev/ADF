@@ -1,0 +1,43 @@
+{
+	"name": "pipeline_ml_with_ds",
+	"properties": {
+		"activities": [
+			{
+				"name": "Machine Learning Execute Pipeline1",
+				"type": "AzureMLExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"experimentName": "showcasing-dataset",
+					"mlPipelineParameters": {
+						"pipeline_arg": {
+							"value": "@pipeline().parameters.filename",
+							"type": "Expression"
+						}
+					},
+					"mlPipelineId": "42495c08-ba9f-4bd1-af5e-34bacee69979"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureML_ml_limor_ws",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"parameters": {
+			"filename": {
+				"type": "string",
+				"defaultValue": "@triggerBody().fileName"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2021-07-12T08:46:27Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,42 @@
+{
+	"name": "pipeline3",
+	"properties": {
+		"activities": [
+			{
+				"name": "Machine Learning Execute Pipeline1",
+				"type": "AzureMLExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"experimentName": "diabetes-dataset",
+					"mlPipelineParameters": {
+						"file_name_dataset": {
+							"value": "@pipeline().parameters.FileName",
+							"type": "Expression"
+						}
+					},
+					"mlPipelineId": "8de7c434-ade7-44af-821c-250591ca7cf5"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureML_ml_limor_ws",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"parameters": {
+			"FileName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2021-07-30T22:02:42Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

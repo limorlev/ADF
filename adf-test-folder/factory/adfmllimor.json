@@ -1,0 +1,9 @@
+{
+	"name": "adfmllimor",
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f87c3c79-d4b9-427f-a907-f5ee24651d01",
+		"tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+	}
+}
